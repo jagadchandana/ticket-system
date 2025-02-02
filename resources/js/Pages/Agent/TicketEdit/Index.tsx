@@ -1,6 +1,7 @@
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
+import StatusBadge from "@/Components/StatusBadge";
 import TextArea from "@/Components/TextArea";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, useForm } from "@inertiajs/react";
@@ -30,9 +31,15 @@ export default function Index({ ticket }: any) {
             <div className="py-12">
                 <div className="max-w-xl mx-auto sm:px-6 lg:px-8">
                     <div className="overflow-hidden shadow-sm sm:rounded-lg ">
-
                         <div className="flex flex-col px-6 py-4 mt-6 bg-white rounded-lg shadow-md">
-                            <div>
+                        <div className="pb-3 ">
+                            <h1 className="text-3xl font-bold">Ticket Details</h1>
+                            <p className="pb-4 mt-1 text-sm text-gray-600">
+                                Here are the details of your ticket.
+                            <StatusBadge status={ticket?.status} />
+                            </p>
+                        </div>
+                            <div className="px-3">
                                 <div className="mt-4">
                                     <InputLabel htmlFor="name" value="Name" />
                                     <p className="pl-3 text-lg font-semibold">{ticket?.name}</p>

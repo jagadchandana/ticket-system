@@ -41,7 +41,7 @@ export default function Dashboard({ tickets, filters }: any) {
 
 
                         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-                            <div className="pb-4 ">
+                            <div className="px-2 pb-4">
                                 <div className="relative mt-1">
                                     <TextInput
                                         onChange={(e) => handleSearch(e.target.value)}
